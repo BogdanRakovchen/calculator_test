@@ -62,13 +62,9 @@ public class CalculatorController {
             @RequestParam(value = "num1") int number1,
             @RequestParam(value = "num2") int number2) {
 
-        if(number2 == 0) {
-            return "Делить на ноль нельзя";
-        }
-
         int sum;
         sum = calculatorServiseImp.divisionTwoNumber(number1, number2);
-        return  number1 + " / " + number2 + " " + " = " + sum;
+        return number1 + " / " + number2 + " " + " = " + sum;
 
     }
 

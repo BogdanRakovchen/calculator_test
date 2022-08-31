@@ -34,9 +34,17 @@ public class CalculatorServiseImp implements CalculatorInterface {
     public int divisionTwoNumber(int num1, int num2) {
 
         int sum;
-        sum = num1 / num2;
+        try {
+            sum = num1 / num2;
+        } catch (RuntimeException e ) {
+            throw new IllegalArgumentException("Делить на ноль нельзя");
+        }
+
         return sum;
     }
 
 
 }
+
+
+
